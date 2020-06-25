@@ -8,13 +8,14 @@
 <body>
 <script type="text/javascript">
 $.ajax({
-    url: 'data3.txt',
+    url: 'data2.csv',
     dataType: 'text',
   }).done(successFunction);
 
 function successFunction(data) {
   var allRows = data.split(/\r?\n|\r/);
   var table = '<table border="1">';
+  var count=0;
   for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
     if (singleRow === 0) {
       table += '<thead>';
@@ -24,6 +25,7 @@ function successFunction(data) {
     }
     var rowCells = allRows[singleRow].split(',');
     for (var rowCell = 0; rowCell < rowCells.length; rowCell++) {
+      if(rowCells[rowCell]=='가평군'){++count;}
       if (singleRow === 0) {
         table += '<th>';
         table += rowCells[rowCell];
@@ -44,7 +46,8 @@ function successFunction(data) {
   }
   table += '</tbody>';
   table += '</table>';
-  $('body').append(table);
+  //document.write(count);
+  $('body').append(count);
 }
 </script>
 </body>
