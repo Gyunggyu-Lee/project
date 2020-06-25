@@ -6,6 +6,7 @@
 <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
 </head>
 <body>
+<aside id="main_section">
 <script type="text/javascript">
 var medicine = 0; //약국
 var hospital1 = 0; //종합병원
@@ -39,8 +40,6 @@ $.ajax({ //요양병원 데이터
     dataType: 'text',
   }).done(successFunction6);
 $.ajax({ //공원 데이터
-    url: '요양병원.csv',
-    dataType: 'text',
   }).done(successFunction7);
 
 function successFunction(data) { //약국
@@ -188,5 +187,11 @@ function successFunction7(data) { //공원
   $('body').append("가평군 공원 면적 : 104㎦<br>");
 }
 </script>
+</section>
+<aside id="main_aside">
+<script>
+$('body').append("점수 출력 : " + hospital2 +" 점 <br><br>");
+</script>
+</section>
 </body>
 </html>
