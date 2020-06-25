@@ -38,6 +38,10 @@ $.ajax({ //요양병원 데이터
     url: '요양병원.csv',
     dataType: 'text',
   }).done(successFunction6);
+$.ajax({ //공원 데이터
+    url: '요양병원.csv',
+    dataType: 'text',
+  }).done(successFunction7);
 
 function successFunction(data) { //약국
   var allRows = data.split(/\r?\n|\r/);
@@ -256,6 +260,10 @@ function successFunction6(data) { //요양병원
   table += '</tbody>';
   table += '</table>';
   $('body').append("가평군 요양병원 "+ hospital5 + " 개<br>");
+}
+
+function successFunction7(data) { //공원
+  $('body').append("가평군 공원 면적 : 104㎦<br>");
 }
 </script>
 </body>
