@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
    <title>Insert title here</title>
@@ -45,38 +45,25 @@ $.ajax({ //공원 데이터
 
 function successFunction(data) { //약국
   var allRows = data.split(/\r?\n|\r/);
-  var table = '<table border="1">';
+  var table = '';
   var count=0;
   for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
     if (singleRow === 0) {
-      table += '<thead>';
-      table += '<tr>';
     } else {
-      table += '<tr>';
     }
     var rowCells = allRows[singleRow].split(',');
     for (var rowCell = 0; rowCell < rowCells.length; rowCell++) {
       if(rowCells[rowCell]=='가평군'){++count;}
       if (singleRow === 0) {
-        table += '<th>';
         table += rowCells[rowCell];
-        table += '</th>';
       } else {
-        table += '<td>';
         table += rowCells[rowCell];
-        table += '</td>';
       }
     }
     if (singleRow === 0) {
-      table += '</tr>';
-      table += '</thead>';
-      table += '<tbody>';
     } else {
-      table += '</tr>';
     }
   }
-  table += '</tbody>';
-  table += '</table>';
   //document.write(count);
   $('body').append("가평군 약국 "+ count + " 개<br>");
   medicine = count;
@@ -84,181 +71,116 @@ function successFunction(data) { //약국
 
 function successFunction2(data) { //종합병원
   var allRows = data.split(/\r?\n|\r/);
-  var table = '<table border="1">';
+  var table = '';
   for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
     if (singleRow === 0) {
-      table += '<thead>';
-      table += '<tr>';
     } else {
-      table += '<tr>';
     }
     var rowCells = allRows[singleRow].split(',');
     for (var rowCell = 0; rowCell < rowCells.length; rowCell++) {
       if(rowCells[rowCell]=='가평군'){++hospital1;}
       if (singleRow === 0) {
-        table += '<th>';
         table += rowCells[rowCell];
-        table += '</th>';
       } else {
-        table += '<td>';
         table += rowCells[rowCell];
-        table += '</td>';
       }
     }
     if (singleRow === 0) {
-      table += '</tr>';
-      table += '</thead>';
-      table += '<tbody>';
     } else {
-      table += '</tr>';
     }
   }
-  table += '</tbody>';
-  table += '</table>';
   $('body').append("가평군 종합병원 "+ hospital1 + " 개<br>");
 }
 
 function successFunction3(data) { //일반병원
   var allRows = data.split(/\r?\n|\r/);
-  var table = '<table border="1">';
+  var table = '';
   for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
     if (singleRow === 0) {
-      table += '<thead>';
-      table += '<tr>';
     } else {
-      table += '<tr>';
     }
     var rowCells = allRows[singleRow].split(',');
     for (var rowCell = 0; rowCell < rowCells.length; rowCell++) {
       if(rowCells[rowCell]=='가평군'){++hospital2;}
       if (singleRow === 0) {
-        table += '<th>';
         table += rowCells[rowCell];
-        table += '</th>';
       } else {
-        table += '<td>';
         table += rowCells[rowCell];
-        table += '</td>';
       }
     }
     if (singleRow === 0) {
-      table += '</tr>';
-      table += '</thead>';
-      table += '<tbody>';
     } else {
-      table += '</tr>';
     }
   }
-  table += '</tbody>';
-  table += '</table>';
   $('body').append("가평군 일반병원 "+ hospital2 + " 개<br>");
 }
 
 function successFunction4(data) { //치과병원
   var allRows = data.split(/\r?\n|\r/);
-  var table = '<table border="1">';
+  var table = '';
   for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
     if (singleRow === 0) {
-      table += '<thead>';
-      table += '<tr>';
     } else {
-      table += '<tr>';
     }
     var rowCells = allRows[singleRow].split(',');
     for (var rowCell = 0; rowCell < rowCells.length; rowCell++) {
       if(rowCells[rowCell]=='가평군'){++hospital3;}
       if (singleRow === 0) {
-        table += '<th>';
         table += rowCells[rowCell];
-        table += '</th>';
       } else {
-        table += '<td>';
         table += rowCells[rowCell];
-        table += '</td>';
       }
     }
     if (singleRow === 0) {
-      table += '</tr>';
-      table += '</thead>';
-      table += '<tbody>';
     } else {
-      table += '</tr>';
     }
   }
-  table += '</tbody>';
-  table += '</table>';
   $('body').append("가평군 치과병원 "+ hospital3 + " 개<br>");
 }
 
 function successFunction5(data) { //한방병원
   var allRows = data.split(/\r?\n|\r/);
-  var table = '<table border="1">';
+  var table = '';
   for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
     if (singleRow === 0) {
-      table += '<thead>';
-      table += '<tr>';
     } else {
-      table += '<tr>';
     }
     var rowCells = allRows[singleRow].split(',');
     for (var rowCell = 0; rowCell < rowCells.length; rowCell++) {
       if(rowCells[rowCell]=='가평군'){++hospital4;}
       if (singleRow === 0) {
-        table += '<th>';
         table += rowCells[rowCell];
-        table += '</th>';
       } else {
-        table += '<td>';
         table += rowCells[rowCell];
-        table += '</td>';
       }
     }
     if (singleRow === 0) {
-      table += '</tr>';
-      table += '</thead>';
-      table += '<tbody>';
     } else {
-      table += '</tr>';
     }
   }
-  table += '</tbody>';
-  table += '</table>';
   $('body').append("가평군 한방병원 "+ hospital4 + " 개<br>");
 }
 
 function successFunction6(data) { //요양병원
   var allRows = data.split(/\r?\n|\r/);
-  var table = '<table border="1">';
+  var table = '';
   for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
     if (singleRow === 0) {
-      table += '<thead>';
-      table += '<tr>';
     } else {
-      table += '<tr>';
     }
     var rowCells = allRows[singleRow].split(',');
     for (var rowCell = 0; rowCell < rowCells.length; rowCell++) {
       if(rowCells[rowCell]=='가평군'){++hospital5;}
       if (singleRow === 0) {
-        table += '<th>';
         table += rowCells[rowCell];
-        table += '</th>';
       } else {
-        table += '<td>';
         table += rowCells[rowCell];
-        table += '</td>';
       }
     }
     if (singleRow === 0) {
-      table += '</tr>';
-      table += '</thead>';
-      table += '<tbody>';
     } else {
-      table += '</tr>';
     }
   }
-  table += '</tbody>';
-  table += '</table>';
   $('body').append("가평군 요양병원 "+ hospital5 + " 개<br>");
 }
 
