@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
    <title>수원시</title>
@@ -6,7 +6,7 @@
 <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
 </head>
 <body>
-  <img width="500" height="300" src="file:///C:\Users\rudrb\Documents\project/ga1.jpg">
+  <img width="500" height="300" src="ga1.jpg">
   </body>
 <body>
 <aside id="main_section">
@@ -58,20 +58,9 @@ function successFunction(data) { //약국
   var table = '';
   //var count=0;
   for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
-    if (singleRow === 0) {
-    } else {
-    }
     var rowCells = allRows[singleRow].split(',');
     for (var rowCell = 0; rowCell < rowCells.length; rowCell++) {
       if(rowCells[rowCell]=='수원시'){++medicine;}
-      if (singleRow === 0) {
-        table += rowCells[rowCell];
-      } else {
-        table += rowCells[rowCell];
-      }
-    }
-    if (singleRow === 0) {
-    } else {
     }
   }
   //document.write(count);
@@ -83,20 +72,9 @@ function successFunction2(data) { //종합병원
   var allRows = data.split(/\r?\n|\r/);
   var table = '';
   for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
-    if (singleRow === 0) {
-    } else {
-    }
     var rowCells = allRows[singleRow].split(',');
     for (var rowCell = 0; rowCell < rowCells.length; rowCell++) {
       if(rowCells[rowCell]=='수원시'){++hospital1;}
-      if (singleRow === 0) {
-        table += rowCells[rowCell];
-      } else {
-        table += rowCells[rowCell];
-      }
-    }
-    if (singleRow === 0) {
-    } else {
     }
   }
   $('body').append("<span style=\"background: white; font-size: 24px; color: black; width: 100px; height:200px;\">수원시 종합병원 <span style=\"background: white; font-size: 24px; color: blue; width: 100px; height:200px;\"> "+ hospital1 + " <span style=\"background: white; font-size: 24px; color: black; width: 100px; height:200px;\">개<br>");
@@ -105,20 +83,9 @@ function successFunction3(data) { //일반병원
   var allRows = data.split(/\r?\n|\r/);
   var table = '';
   for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
-    if (singleRow === 0) {
-    } else {
-    }
     var rowCells = allRows[singleRow].split(',');
     for (var rowCell = 0; rowCell < rowCells.length; rowCell++) {
       if(rowCells[rowCell]=='수원시'){++hospital2;}
-      if (singleRow === 0) {
-        table += rowCells[rowCell];
-      } else {
-        table += rowCells[rowCell];
-      }
-    }
-    if (singleRow === 0) {
-    } else {
     }
   }
   $('body').append("<span style=\"background: white; font-size: 24px; color: black; width: 100px; height:200px;\">수원시 일반병원<span style=\"background: white; font-size: 24px; color: blue; width: 100px; height:200px;\"> "+ hospital2 + " <span style=\"background: white; font-size: 24px; color: black; width: 100px; height:200px;\">개<br>");
@@ -128,20 +95,9 @@ function successFunction4(data) { //치과병원
   var allRows = data.split(/\r?\n|\r/);
   var table = '';
   for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
-    if (singleRow === 0) {
-    } else {
-    }
     var rowCells = allRows[singleRow].split(',');
     for (var rowCell = 0; rowCell < rowCells.length; rowCell++) {
       if(rowCells[rowCell]=='수원시'){++hospital3;}
-      if (singleRow === 0) {
-        table += rowCells[rowCell];
-      } else {
-        table += rowCells[rowCell];
-      }
-    }
-    if (singleRow === 0) {
-    } else {
     }
   }
   $('body').append("<span style=\"background: white; font-size: 24px; color: black; width: 100px; height:200px;\">수원시 치과병원<span style=\"background: white; font-size: 24px; color: blue; width: 100px; height:200px;\"> "+ hospital3 + "<span style=\"background: white; font-size: 24px; color: black; width: 100px; height:200px;\"> 개<br>");
@@ -151,20 +107,9 @@ function successFunction5(data) { //한방병원
   var allRows = data.split(/\r?\n|\r/);
   var table = '';
   for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
-    if (singleRow === 0) {
-    } else {
-    }
     var rowCells = allRows[singleRow].split(',');
     for (var rowCell = 0; rowCell < rowCells.length; rowCell++) {
       if(rowCells[rowCell]=='수원시'){++hospital4;}
-      if (singleRow === 0) {
-        table += rowCells[rowCell];
-      } else {
-        table += rowCells[rowCell];
-      }
-    }
-    if (singleRow === 0) {
-    } else {
     }
   }
   $('body').append("<span style=\"background: white; font-size: 24px; color: black; width: 100px; height:200px;\">수원시 한방병원<span style=\"background: white; font-size: 24px; color: blue; width: 100px; height:200px;\"> "+ hospital4 + "<span style=\"background: white; font-size: 24px; color: black; width: 100px; height:200px;\"> 개<br>");
@@ -174,20 +119,9 @@ function successFunction6(data) { //요양병원
   var allRows = data.split(/\r?\n|\r/);
   var table = '';
   for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
-    if (singleRow === 0) {
-    } else {
-    }
     var rowCells = allRows[singleRow].split(',');
     for (var rowCell = 0; rowCell < rowCells.length; rowCell++) {
       if(rowCells[rowCell]=='수원시'){++hospital5;}
-      if (singleRow === 0) {
-        table += rowCells[rowCell];
-      } else {
-        table += rowCells[rowCell];
-      }
-    }
-    if (singleRow === 0) {
-    } else {
     }
   }
   $('body').append("<span style=\"background: white; font-size: 24px; color: black; width: 100px; height:200px;\">수원시 요양병원 <span style=\"background: white; font-size: 24px; color: blue; width: 100px; height:200px;\">"+ hospital5 + " <span style=\"background: white; font-size: 24px; color: black; width: 100px; height:200px;\">개<br>");
