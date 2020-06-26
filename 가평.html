@@ -6,7 +6,7 @@
 <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
 </head>
 <body>
-  <img width="500" height="300" src="file:///C:/Users/user/Desktop/project-master/ga1.jpg">
+  <img width="500" height="300" src="file:///C:\Users\rudrb\Documents\project/ga1.jpg">
   </body>
 <body>
 <aside id="main_section">
@@ -17,6 +17,7 @@ var hospital2 = 0; //일반병원
 var hospital3 = 0; //차과병원
 var hospital4 = 0; //한방병원
 var hospital5 = 0; //요양병원
+var gpark = 52.21; //경기도 공원 면적
 
 $.ajax({ // 약국 데이터
     url: '약국.csv',
@@ -193,7 +194,7 @@ function successFunction6(data) { //요양병원
 }
 
 function successFunction7(data) { //공원
-  $('body').append("<span style=\"background: white; font-size: 24px; color: black; width: 100px; height:200px;\">가평군 공원 면적 : <span style=\"background: white; font-size: 24px; color: blue; width: 100px; height:200px;\">104㎦<br>");
+  $('body').append("<span style=\"background: white; font-size: 24px; color: black; width: 100px; height:200px;\">가평군 공원 면적 : <span style=\"background: white; font-size: 24px; color: blue; width: 100px; height:200px;\"<br>"+gpark+"㎢<br>");
 }
 </script>
 </section>
@@ -206,7 +207,7 @@ var hos4 = 6.08; //한방병원 0.10
 var hos5 = 0.18; //요양병원 0.05
 var medic = 8.43; //약국 0.35
 var spark = 0.27; //서울공원면적 0.20
-var gpark = 104; //경기도 공원 면적
+//var gpark = 52.21; //경기도 공원 면적
 var area = 843.6; //시,군 면적
 var result = eval(hospital1/area/hos1*100*0.45*0.45+hospital2/area/hos2*100*0.45*0.25
 +hospital3/area/hos3*100*0.45*0.15+hospital4/area/hos4*100*0.45*0.1+hospital5/area/hos5*100*0.45*0.05
