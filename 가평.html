@@ -11,7 +11,7 @@
 <body>
 <aside id="main_section">
 <script type="text/javascript">
-medicine = 0; //약국
+var medicine = 0; //약국
 var hospital1 = 0; //종합병원
 var hospital2 = 0; //일반병원
 var hospital3 = 0; //차과병원
@@ -207,13 +207,12 @@ var hos4 = 6.08; //한방병원 0.10
 var hos5 = 0.18; //요양병원 0.05
 var medic = 8.43; //약국 0.35
 var spark = 0.27; //서울공원면적 0.20
-//var gpark = 52.21; //경기도 공원 면적
 var area = 843.6; //시,군 면적
 var result = eval(hospital1/area/hos1*100*0.45*0.45+hospital2/area/hos2*100*0.45*0.25
 +hospital3/area/hos3*100*0.45*0.15+hospital4/area/hos4*100*0.45*0.1+hospital5/area/hos5*100*0.45*0.05
 +gpark/area/spark*100*0.2+medicine/area/medic*100*0.35);
 
-$('body').append("<span style=\"background: white; font-size: 24px; color: black; width: 100px; height:200px;\">점수 출력 : <span style=\"background: white; font-size: 24px; color: red; width: 100px; height:200px;\"> " + result.toFixed(2) +" <span style=\"background: white; font-size: 24px; color: black; width: 100px; height:200px;\">점 <br><br>");
+$('body').append("<span style=\"background: white; font-size: 24px; color: black; width: 100px; height:200px;\">점수 출력 : <span style=\"background: white; font-size: 24px; color: red; width: 100px; height:200px;\"> " + result.toFixed(1) +" <span style=\"background: white; font-size: 24px; color: black; width: 100px; height:200px;\">점 <br><br>");
 
 </script>
 </script>
