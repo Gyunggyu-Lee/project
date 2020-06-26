@@ -17,8 +17,7 @@ var hospital2 = 0; //일반병원
 var hospital3 = 0; //차과병원
 var hospital4 = 0; //한방병원
 var hospital5 = 0; //요양병원
-var gpark = 8.5; //경기도 공원 면적
-
+var gpark = 8.5;
 $.ajax({ // 약국 데이터
     url: '약국.csv',
     dataType: 'text',
@@ -141,6 +140,7 @@ var hos4 = 6.08; //한방병원 0.10
 var hos5 = 0.18; //요양병원 0.05
 var medic = 8.43; //약국 0.35
 var spark = 0.27; //서울공원면적 0.20
+//var gpark = 17; //경기도 공원 면적
 var area = 121.1; //시,군 면적
 var result = eval((hospital1/area/hos1*100*0.45*0.45)+(hospital2/area/hos2*100*0.45*0.25)
 +(hospital3/area/hos3*100*0.45*0.15)+(hospital4/area/hos4*100*0.45*0.1)+(hospital5/area/hos5*100*0.45*0.05)
